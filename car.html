@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易购物车</title>
+		<script src="cookieXyy.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oList=document.createElement("list");
+				if(get_cookie("_shoop")){
+					alert(1)
+					var obj=JSON.parse(get_cookie("_shoop"));
+					var str='';
+					str+='<li>'
+					str+='<img src='+obj.pic+'/>';
+					str+='<p>'+obj.title+'</p>';
+					str+='<p>'+obj.price+'</p>';
+					str+='</li>'
+		
+					oList.innerHTML=str;
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
